@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t image1 -f Dockerfile.dev ./dockerfiles
+  - docker build -t image1 -f ./dockerfiles/Dockerfile.dev .
 
 script:
   - docker run -e CI=true image1 npm run test -- --coverage
