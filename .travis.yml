@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t BUILDIMAGE -f Dockerfile.dev ./dockerfiles
+  - docker build -t buildimage -f Dockerfile.dev ./dockerfiles
 
 script:
-  - docker run -e CI=true BUILDIMAGE npm run test -- --coverage
+  - docker run -e CI=true buildimage npm run test -- --coverage
