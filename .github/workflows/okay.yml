@@ -2,7 +2,7 @@ name: "Okay"
 
 on:
   push:
-    branches: [master, dev]
+    branches: [master, dev, main]
 
 jobs:
   testitesti:
