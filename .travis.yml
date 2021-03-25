@@ -9,3 +9,10 @@ before_install:
 
 script:
   - docker run -e CI=true image1 npm run test
+
+deploy:
+  provider: elasticbeanstalk
+  region: "eu-west-1"
+  app: "docker-web"
+  env: "Dockerweb-env"
+  bucket_name:
